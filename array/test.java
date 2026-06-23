@@ -1,29 +1,53 @@
 package array;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class test {
-    public static void main(String[] args) {
-        
 
-        Set<Integer> ss= new HashSet<>();
-        ss.add(1);
-        ss.add(1);
-        String s="hii";
-        
-        char []c=s.toCharArray();
-        List<Character> l=new LinkedList<>();
+    public static void countFre(String s){
 
-        for(int i=0;i<=c.length-1;i++){
-            l.add(c[i]);
+        Map<Character,Integer> map=new HashMap<>();
+
+        if(s.isEmpty()){
+            System.out.println("String is empty");
+            return ;
         }
 
-        System.out.println(l.contains('g'));
+    
+        for(char c : s.toCharArray()){
+
+            map.put(c,map.getOrDefault(c,0)+1);
+
+        }
+
+
+        map.forEach((key,object) ->System.out.println(key + " "+ object));
+
+
+
+    }
+    
+    public static void main(String[] args) {
+        
+       
+      
+        String s="hhhello";
+      
+
+        for(int i =0; i<s.length()-1;i++){
+            if(s.charAt(i)!= s.charAt(i+1)){
+                System.err.println(s.charAt(i));
+                break;
+            }
+            else{
+                i++;
+            }
+        }
+
+
+
 
     }
 }
+

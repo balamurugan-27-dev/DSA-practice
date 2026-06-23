@@ -2,7 +2,7 @@ package string;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+
 
 public class FirstNonRepeatChar {
     public static void firstNonRepeatChar(String s){
